@@ -1,5 +1,5 @@
-###############################################################################
-# TODO: 1. (6 pts)
+import math
+# DONE: 1. (6 pts)
 #
 #   In this module, we are going to start the process of making our own
 #   calculator. It is going to be a very simple calculator, because the user
@@ -27,9 +27,22 @@
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
+def add(x, y):
+   return x + y
 
+def subtract(x, y):
+   return x - y
+
+def multiply(x, y):
+   return x * y
+
+def divide(x, y):
+   return x / y
+
+def power(x, y):
+   return math.pow(x, y)
 ###############################################################################
-# TODO: 2. (8 pts)
+# DONE: 2. (8 pts)
 #
 #   Now we need a function that will act as the control unit. It will ask the
 #   user for inputs and call the math functions.
@@ -59,9 +72,33 @@
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
+def main():
+   print(f"Greetings, kind stranger!")
 
+   numberx = int(input("Please imput an interger:"))
+   numbery = int(input("Please imput a second interger:"))
+       
+
+   a = add(numberx, numbery)
+   s = subtract(numberx, numbery)
+   m = multiply(numberx, numbery)
+   d = divide(numberx, numbery)
+   p = power(numberx, numbery)
+
+   print(f"add: {a}")
+   print(f"subtract: {s}")
+   print(f"multiply: {m}")
+   print(f"divide: {d}")
+   print(f"power: {p}")
+
+   
+def goodbye():
+   print(f"See you again stranger!")
+
+main()
+goodbye()
 ###############################################################################
-# TODO: 3. EXTRA CREDIT (4 pts)
+# DONE: 3. EXTRA CREDIT (4 pts)
 #
 #   For this _TODO_, do NOT write your code beneath it. You will be modifying
 #   your code above. This is extra credit, so you don't need to complete this
